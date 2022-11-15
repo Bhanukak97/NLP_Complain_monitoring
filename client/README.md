@@ -1,3 +1,28 @@
+
+
+## How to Run the Project
+# 1. first clone the project
+
+## Server
+# 2. cd flask-server
+# 3. type "source venv/bin/activate" to activate the virtual environment
+# 4. python2 server.py to run the server
+
+
+## Client
+# 5. cd client
+# 6. npm install
+# 7. npm start
+
+
+## How to test system
+You can see the table which contains sample complains and copy paste one of them in the text field section and click continue.
+You can compare the predicted category with table category to check the accuracy
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
