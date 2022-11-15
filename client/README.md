@@ -1,18 +1,18 @@
 
 
 # How to Run the Project
-## 1. first clone the project
+### 1. first clone the project
 
-# Server
-## 2. cd flask-server
-## 3. type "source venv/bin/activate" to activate the virtual environment
-## 4. python2 server.py to run the server
+## Server
+### 2. cd flask-server
+### 3. type "source venv/bin/activate" to activate the virtual environment
+### 4. python2 server.py to run the server
 
 
-# Client
-## 5. cd client
-## 6. npm install
-## 7. npm start
+## Client
+### 5. cd client
+### 6. npm install
+### 7. npm start
 
 
 # How to test system
