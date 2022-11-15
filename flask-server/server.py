@@ -36,7 +36,7 @@ def home():
 @app.route('/api', methods=['GET'])
 def index():
     return {
-        'name':' Hi! Welcome to this Website.'
+        'name':' Hi! Welcome'
     }
 
 @app.route("/members")

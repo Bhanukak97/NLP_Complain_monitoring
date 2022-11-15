@@ -12,7 +12,7 @@ export const Form = ({ userInput, onFormChange, onFormSubmit }) => {
   };
 
   return (
-    <div style={{ marginLeft: "50px", marginTop: "50px", marginRight: "50px" }}>
+    <div style={{ marginTop: "50px" }}>
       <form onSubmit={handleSubmit}>
         <TextField
           label="Enter Your Complain"

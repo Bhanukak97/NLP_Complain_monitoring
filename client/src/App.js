@@ -6,9 +6,9 @@ import CardBody from "./components/Card/CardBody";
 import GridItem from "./components/Grid/GridItem";
 import GridContainer from "./components/Grid/GridContainer";
 import Table from "./components/TabelData/Tabel";
+import bulb from "./Assets/image/bulb.gif";
 
 function App() {
-  // const [data, setData] = useState([{}]);
   const [message, setMessage] = useState([{}]);
   const [addData, setAddData] = useState("");
   const [resultData, setResultData] = useState([{}]);
@@ -23,21 +23,6 @@ function App() {
       })
       .then((data) => setMessage(data));
   }, []);
-
-  // useEffect(() => {
-  //   fetch("/members")
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setData(data);
-  //       console.log(data);
-  //     });
-  // }, []);
-
-  // useEffect(() => {
-  //   fetch("/home")
-  //     .then((res) => res.json())
-  //     .then((value) => setMessage(value));
-  // }, []);
 
   const handleFormChange = (inputValue) => {
     setAddData(inputValue);
@@ -59,22 +44,47 @@ function App() {
 
   return (
     <div>
-      <h1>{message.name}</h1>
-      <h2 style={{ marginLeft: "500px", marginTop: "20px" }}>
-        Matching Category is: {resultData.message}
-      </h2>
-
-      <Form
-        userInput={addData}
-        onFormChange={handleFormChange}
-        onFormSubmit={handleFormSubmit}
-      />
+      <h1 style={{ textAlign: "center" }}>{message.name}</h1>
       <div>
-        <GridContainer style={{ padding: "100px" }}>
+        <GridContainer style={{ padding: "30px", flexWrap: "unset" }}>
+          <GridItem style={{ width: "100%" }}>
+            <Form
+              userInput={addData}
+              onFormChange={handleFormChange}
+              onFormSubmit={handleFormSubmit}
+            />
+            <Card style={{ marginTop: "100px" }}>
+              <CardHeader
+                style={{
+                  textAlign: "center",
+                  marginTop: "-50px",
+                  backgroundColor: "#3f51b5",
+                }}
+              >
+                <h2 style={{ color: "#fff" }}> Matching Category</h2>
+              </CardHeader>
+
+              {resultData.message ? (
+                <CardBody>
+                  <h2 style={{ textAlign: "center", marginTop: "20px" }}>
+                    {resultData.message}
+                  </h2>
+                </CardBody>
+              ) : (
+                <img
+                  style={{ align: "center" }}
+                  width={"100%"}
+                  height={"100%"}
+                  src={bulb}
+                  alt="loading..."
+                />
+              )}
+            </Card>
+          </GridItem>
           <GridItem>
             <Card>
-              <CardHeader color="primary">
-                <h4>Sample Complains</h4>
+              <CardHeader style={{ backgroundColor: "#3f51b5" }}>
+                <h4 style={{ color: "#fff" }}>Sample Complains</h4>
               </CardHeader>
               <CardBody>
                 <Table />
