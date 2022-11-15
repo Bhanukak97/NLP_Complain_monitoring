@@ -1,0 +1,116 @@
+[
+    {"id":1,"receiving_division": "Electrical Inspection Division","complain_division": "There is hazardous wiring in the walls.  he keeps getting shocked when he touches furniture in the room."},
+    {"id":2,"receiving_division": "Electrical Inspection Division","complain_division": "Car hit electric panel, panel is sparking."},
+    {"id":3,"receiving_division": "Housing Inspection Services","complain_division": "The refrigerator is giving tenant shocks.  she's afraid to unplug it and besides she needs to keep the baby's milk in it."},
+    {"id":4,"receiving_division": "Payday loan","complain_division": "Can't contact lender"},
+    {"id":5,"receiving_division": "Money transfers","complain_division": "Other service issues"},
+    {"id":6,"receiving_division": "Credit reporting","complain_division": "Credit reporting company's investigation"},
+    {"id":7,"receiving_division": "Student loan","complain_division": "Dealing with my lender or servicer"},
+    {"id":8,"receiving_division": "Building Inspection Division","complain_division": "Foundation crack"},
+    {"id":9,"receiving_division": "Debt collection","complain_division": "Disclosure verification of debt"}, 
+    {"id":10,"receiving_division": "Prepaid card","complain_division": "Advertising, marketing or disclosures"},
+    {"id":11,"receiving_division": "Inspection Services","complain_division": "Wall tagged 181 29th street (311 sr#11782294)"},
+    {"id":12,"receiving_division": "Credit reporting","complain_division": "Unable to get credit report/credit score"},
+    {"id":13,"receiving_division": "Other financial service","complain_division": "Fraud or scam"},
+    {"id":14,"receiving_division": "Prepaid card","complain_division": "Fraud or scam"},
+    {"id":15,"receiving_division": "Plumbing Inspection Division","complain_division": "Broken sewer pipe."},
+    {"id":16,"receiving_division": "Code Enforcement Section","complain_division": "Vacant storefront"},
+    {"id":17,"receiving_division": "Disabled Access Division","complain_division": "Illegal exterior landing at entry doors."},
+    {"id":18,"receiving_division": "Bank account or service","complain_division": "Account opening, closing, or management"},
+    {"id":19,"receiving_division": "Plumbing Inspection Division","complain_division": "Needs to renew boiler permit for permit no 105300 , serial no 0805282894"},
+    {"id":20,"receiving_division": "Other financial service","complain_division": "Fraud or scam"},
+    {"id":21,"receiving_division": "Money transfers","complain_division": "Money was not available when promised"},
+    {"id":22,"receiving_division": "Consumer Loan","complain_division": "Problems when you are unable to pay"},
+    {"id":23,"receiving_division": "Consumer Loan","complain_division": "Managing the loan or lease"},
+    {"id":24,"receiving_division": "Prepaid card","complain_division": "Unauthorized transactions/trans. issues"},
+    {"id":25,"receiving_division": "Debt collection","complain_division": "Disclosure verification of debt"},
+    {"id":26,"receiving_division": "Department of Bldg Inspection","complain_division": "No hot water in bldg. for a week.  water that comes out of faucet at times is dirty, impure.  no smoke alarm."},
+    {"id":27,"receiving_division": "Department of Bldg Inspection","complain_division": "No heat in bldg."
+    },
+    {"id":28,"receiving_division": "Credit reporting","complain_division": "Incorrect information on credit report"},
+    {"id":29,"receiving_division": "Bank account or service","complain_division": "Deposits and withdrawals"},
+    {"id":32,"receiving_division": "Credit reporting","complain_division": "Credit monitoring or identity protection"},
+    {"id":33,"receiving_division": "Credit card","complain_division": "Credit line increase/decrease"},
+    {"id":34,"receiving_division": "Credit card", "complain_division": "Payoff process"},
+    {"id":35,"receiving_division": "Student loan","complain_division": "Problems when you are unable to pay"},
+    {"id":36,"receiving_division": "Credit reporting","complain_division": "Unable to get credit report/credit score"
+    },
+    {"id":37,"receiving_division": "Disabled Access Division","complain_division": "Elevator drops 2-3 floors with people on it; bathrooms are not good (no specific complaint)"
+    },
+    {"id":38,"receiving_division": "Disabled Access Division","complain_division": "The entry door to the sports medical shop has excessive door pressure.  location: 1st fly street level. (ref. ada as 4.13.10 by sandoval)"
+    },
+    { "id":39,"receiving_division": "Money transfers","complain_division": "Other transaction issues"
+    },
+    {"id":40,"receiving_division": "Mortgage","complain_division": "Credit decision / Underwriting"
+    },
+    {"id":41,"receiving_division": "Credit reporting","complain_division": "Credit monitoring or identity protection"
+    },
+      {"id":42,
+        "receiving_division": "Money transfers",
+        "complain_division": "Other transaction issues"
+      },
+      {"id":43,
+        "receiving_division": "Prepaid card",
+        "complain_division": "Fees"
+      },
+      {"id":44,
+        "receiving_division": "Department of Bldg Inspection",
+        "complain_division": "Debris in back yard of house and in garage-lumber, grass, etc.  windows don't close; front door lock is broken; no proper water connection-complaintant put something together himself; carpet dirty/smelly. roaches in kitchen-referred to dph."
+      },
+      {"id":45,
+        "receiving_division": "Electrical Inspection Division",
+        "complain_division": "Electrical machines are supplied by extension cords."
+      },
+      {"id":46,
+        "receiving_division": "Consumer Loan",
+        "complain_division": "Managing the loan or lease"
+      },
+      {"id":47,
+        "receiving_division": "Disabled Access Division",
+        "complain_division": "There is no accessible for handicap @ the restrooms, bars' is too high and door is too heavy."
+      },
+      {"id":48,
+        "receiving_division": "Debt collection",
+        "complain_division": "Cont'd attempts collect debt not owed"
+      },
+      {"id":49,
+        "receiving_division": "Credit reporting",
+        "complain_division": "Incorrect information on credit report"
+      },
+      {"id":50,
+        "receiving_division": "Prepaid card",
+        "complain_division": "Managing, opening, or closing account"
+      },
+      {"id":51,
+        "receiving_division": "Mortgage",
+        "complain_division": "Loan modification,collection,foreclosure"
+      },
+      {"id":52,
+        "receiving_division": "Bank account or service",
+        "complain_division": "Account opening, closing, or management"
+      },
+      {"id":53,
+        "receiving_division": "Mortgage",
+        "complain_division": "Loan servicing, payments, escrow account"
+      },
+      {"id":54,
+        "receiving_division": "Building Inspection Division",
+        "complain_division": "4640 balboa street --- caller reporting jackhammering noise exceeding 5db at property line, from approx 8am to 7pm (311 sr#12709288)"
+      },
+      {"id":55,
+        "receiving_division": "Student loan",
+        "complain_division": "Repaying your loan"
+      },
+      {"id":56,
+        "receiving_division": "Student loan",
+        "complain_division": "Can't repay my loan"
+      },
+      {"id":57,
+        "receiving_division": "Debt collection",
+        "complain_division": "Communication tactics"
+      },
+      {"id":58,
+        "receiving_division": "Debt collection",
+        "complain_division": "Cont'd attempts collect debt not owed"
+      }
+]
