@@ -7,12 +7,17 @@ import GridItem from "./components/Grid/GridItem";
 import GridContainer from "./components/Grid/GridContainer";
 import Table from "./components/TabelData/Tabel";
 import bulb from "./Assets/image/bulb.gif";
+import fear from "./Assets/image/fear.png";
+import anger from "./Assets/image/anger.png";
+import love from "./Assets/image/love.png";
+import joy from "./Assets/image/joy.png";
+import sad from "./Assets/image/sad.png";
+import surprise from "./Assets/image/surprise.png";
 
 function App() {
   const [message, setMessage] = useState([{}]);
   const [addData, setAddData] = useState("");
   const [resultData, setResultData] = useState([{}]);
-  console.log("resultData", resultData);
 
   useEffect(() => {
     fetch("/api")
@@ -32,7 +37,7 @@ function App() {
     fetch("/api/predict", {
       method: "POST",
       body: JSON.stringify({
-        Message: addData,
+        Text: addData,
       }),
       headers: {
         "Content-type": "application.json; charset=UTF-8",
@@ -40,6 +45,75 @@ function App() {
     })
       .then((response) => response.json())
       .then((message) => setResultData(message), setAddData(""));
+  };
+
+  const selectImage = (text) => {
+    if (text === "sadness") {
+      return (
+        <img
+          style={{ align: "center" }}
+          width={"100%"}
+          height={"100%"}
+          src={sad}
+          alt="loading..."
+        />
+      );
+    }
+    if (text === "anger") {
+      return (
+        <img
+          style={{ align: "center" }}
+          width={"100%"}
+          height={"100%"}
+          src={anger}
+          alt="loading..."
+        />
+      );
+    }
+    if (text === "love") {
+      return (
+        <img
+          style={{ align: "center" }}
+          width={"100%"}
+          height={"100%"}
+          src={love}
+          alt="loading..."
+        />
+      );
+    }
+    if (text === "fear") {
+      return (
+        <img
+          style={{ align: "center" }}
+          width={"100%"}
+          height={"100%"}
+          src={fear}
+          alt="loading..."
+        />
+      );
+    }
+    if (text === "joy") {
+      return (
+        <img
+          style={{ align: "center" }}
+          width={"100%"}
+          height={"100%"}
+          src={joy}
+          alt="loading..."
+        />
+      );
+    }
+    if (text === "surprise") {
+      return (
+        <img
+          style={{ align: "center" }}
+          width={"100%"}
+          height={"100%"}
+          src={surprise}
+          alt="loading..."
+        />
+      );
+    }
   };
 
   return (
@@ -61,13 +135,18 @@ function App() {
                   backgroundColor: "#3f51b5",
                 }}
               >
-                <h2 style={{ color: "#fff" }}> Matching Category</h2>
+                <h2 style={{ color: "#fff" }}> My Emotion</h2>
               </CardHeader>
 
               {resultData.message ? (
                 <CardBody>
-                  <h2 style={{ textAlign: "center", marginTop: "20px" }}>
-                    {resultData.message}
+                  <h2
+                    style={{
+                      textAlign: "center",
+                      marginTop: "0px",
+                    }}
+                  >
+                    {selectImage(resultData.message)}
                   </h2>
                 </CardBody>
               ) : (
@@ -84,7 +163,7 @@ function App() {
           <GridItem>
             <Card>
               <CardHeader style={{ backgroundColor: "#3f51b5" }}>
-                <h4 style={{ color: "#fff" }}>Sample Complains</h4>
+                <h4 style={{ color: "#fff" }}>Sample Emotion Explanations</h4>
               </CardHeader>
               <CardBody>
                 <Table />

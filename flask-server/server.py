@@ -16,7 +16,7 @@ from sklearn.naive_bayes import MultinomialNB
 
 app = Flask(__name__)
 
-clf=pickle.load(open('model.pkl','rb'))
+clf=pickle.load(open('emotion_model.pkl','rb'))
 
 stop_words = set(stopwords.words('english'))
 from nltk.stem import WordNetLemmatizer 
@@ -45,26 +45,27 @@ def members():
 
 @app.route('/api/predict',methods=['POST'])
 def predict():
-    input_data = pd.read_csv("newfile.csv")
+    input_data = pd.read_csv("emotion.csv")
     countvec = CountVectorizer(min_df= 5, tokenizer=custom_preprocessor, stop_words=stopwords.words('english'))
-    dtm = pd.DataFrame(countvec.fit_transform(input_data['Message'].apply(lambda dtm: np.str_(dtm))).toarray(), columns=countvec.get_feature_names(), index=None)
+    dtm = pd.DataFrame(countvec.fit_transform(input_data['Text'].apply(lambda dtm: np.str_(dtm))).toarray(), columns=countvec.get_feature_names(), index=None)
     #Adding label Column
-    dtm['Category'] = input_data['Category'] 
-    df_train = dtm[:7000]
-    df_test = dtm[7000:]
+    dtm['Label'] = input_data['Label'] 
+    df_train = dtm[:15000]
+    df_test = dtm[15000:]
 
     clf = MultinomialNB()
-    X_train= df_train.drop(['Category'], axis=1)
+    X_train= df_train.drop(['Label'], axis=1)
     #Fitting model to our data
-    clf.fit(X_train, df_train['Category'])
+    clf.fit(X_train, df_train['Label'])
 
-    ytb_model=open("model.pkl","rb")
+    ytb_model=open("emotion_model.pkl","rb")
     clf = joblib.load(ytb_model)
     
 
     if request.method == 'POST':
         request_data=json.loads(request.data)
-        mydata=request_data['Message']
+        #getting data from the frontend
+        mydata=request_data['Text']
         data=[mydata]
         vect = countvec.transform(data).toarray()
         my_prediction = clf.predict(vect)[0]
